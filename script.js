@@ -3,12 +3,15 @@ $(document).ready(function() {
         $(".hidden").slideToggle();
     });
     
-    // var urlRandom = 'https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/wiki/Special:Random';
-    var urlRandom = 'https://en.wikipedia.org/wiki/Special:Random';
+    
     var urlSearch = 'https://en.wikipedia.org/w/api.php?action=opensearch&datatype=json&limit=5&search=cat&callback=?';    
-  
-        
+
+// To get and display a random Wikipedia entry    
+    
+    var urlRandom = 'https://en.wikipedia.org/wiki/Special:Random';
+    
     $("#random").on("click", function() {
+            $("#random").html("Another Random Entry");
             $(".hidden-random").slideDown();
             $(".hidden-button").fadeIn();
             $("#frame").attr("src", urlRandom);
@@ -17,30 +20,18 @@ $(document).ready(function() {
     $("#hide-random").on("click", function() {
             $(".hidden-random").slideUp();
             $(".hidden-button").fadeOut(); 
+            $("#random").html("View a Random Entry");
     });
+    
+});
     
 /*    
     
     
-    function loadRandom() {
-        
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            $("#random-text").html("new article");
-            console.log();
-        };
+ 
   
     // https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exlimit=max&format=json&exsentences=1&exintro=&explaintext=&generator=search&gsrlimit=10&gsrsearch=    
         
-       // xhttp.open("GET", 'https://cors-anywhere.herokuapp.com/https://en.wikipedia.org/wiki/Special:Random', true);
-        xhttp.open("GET", urlSearch, true);
-        xhttp.send();
-    loadRandom();
-      
-      //if (this.readyState == 4 && this.status == 200) {
-      //document.getElementById("demo").innerHTML = this.responseText;
-    //}
-  };
   */  
 
         
@@ -67,8 +58,3 @@ $(document).ready(function() {
     // 
         
         */
-    });         
-//        });
-    
-    
-//}); 

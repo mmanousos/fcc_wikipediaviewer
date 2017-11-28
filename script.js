@@ -8,11 +8,16 @@ $(document).ready(function() {
     var urlSearch = 'https://en.wikipedia.org/w/api.php?action=opensearch&datatype=json&limit=5&search=cat&callback=?';    
   
         
-    $("button").on("click", function() {
+    $("#random").on("click", function() {
             $(".hidden-random").slideDown();
+            $(".hidden-button").fadeIn();
             $("#frame").attr("src", urlRandom);
-        //var newPage = window.open(urlRandom); 
     }); 
+    
+    $("#hide-random").on("click", function() {
+            $(".hidden-random").slideUp();
+            $(".hidden-button").fadeOut(); 
+    });
     
 /*    
     

@@ -11,9 +11,14 @@ p {
     color: #4D3179;
 }
 
-button {
+#random {
     background-color: #5B2EA0;
     color: #C82B6D;
+}
+
+.hidden-button {
+    color: #5B2EA0;
+    background-color: #C82B6D;
 }
 
 a:viewed,
@@ -41,7 +46,8 @@ a:hover {
 }
 
 .hidden, 
-.hidden-random {
+.hidden-random,
+.hidden-button {
     display: none;
 }
 

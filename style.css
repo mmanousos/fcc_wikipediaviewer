@@ -1,0 +1,53 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #97355E;
+}
+
+a, 
+h1,
+h2, 
+h3,
+p {
+    color: #4D3179;
+}
+
+button {
+    background-color: #5B2EA0;
+    color: #C82B6D;
+}
+
+a:viewed,
+a:active, 
+a:link {
+    color: #4D3179;
+    
+} 
+a:hover {
+    color: #6822D4;
+}
+
+.search {
+    width: 30px;
+}
+
+.title {
+    margin-top: 20px;
+}
+
+.main,
+.random-button, 
+.credit {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#search-bar {
+    height: 20px;
+}
+
+/* Color pallette: 
+http://paletton.com/#uid=55i0T0kkRmibe6jfRe6p9twtxJZ
+background: #97355E; raspberry

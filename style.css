@@ -40,7 +40,8 @@ a:hover {
     text-align: center;
 }
 
-.hidden {
+.hidden, 
+.hidden-random {
     display: none;
 }
 

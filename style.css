@@ -57,6 +57,13 @@ a:hover {
     margin-bottom: 10px;
 }
 
+#submit-button {
+    border-radius: 5px;
+    color: #6822D4;
+    background-color: #C82B6D;
+    border-color: #5B2EA0;
+}
+
 /* Color pallette: 
 http://paletton.com/#uid=55i0T0kkRmibe6jfRe6p9twtxJZ
 background: #97355E; raspberry

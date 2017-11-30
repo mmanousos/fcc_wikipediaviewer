@@ -1,50 +1,60 @@
 $(document).ready(function() {
 
-// To reveal/hide search bar
+// To reveal/hide search bar - also hides entries and clears search bar
     
     $("#search").on("click", function() {
         $(".hidden").slideToggle();
         $(".entry-display").addClass("hidden-search-display");
+    // clear value of input bar on search bar hide
+        $("#search-bar").val("");
     });
     
 // To invoke search     
     
+    
 // searches using enter/return key from within search box 
-//function searchBar() {    
     $('#search-bar').keyup(function() {
-        if ( event.which == 13 ) {    
-            var inputVal = $('#search-bar').val();
-            var urlSearch = 'https://en.wikipedia.org/w/api.php?action=opensearch&datatype=json&limit=5&search=' + inputVal + '&callback=?';  
-             $.getJSON(urlSearch, function(data) {
-                
-                var titleArr = data[1];
-                var descArr = data[2];
-                var linkArr = data[3];
-                
-                var entries = [];
-                
-                function createEntry(i) {
-                    var title = titleArr[i];
-                    var description = descArr[i];
-                    var link = linkArr[i];
-                    var html = "";
-                    html += "<div class = 'entry'>";
-                    html += "<a href='" + link + "'><h2>" + title + "</h2></a>";
-                    html += "<p>" + description + "</p>";
-                    html += "</div>";
-                    //console.log(titleArr[i], descArr[i], linkArr[i]);
-                    return html;
-                }; 
-                
-                for (var i = 0; i < 5; i++) {
-                    entries[i] = createEntry(i);
-                };
-                 
-                 $(".entry-display").removeClass("hidden-search-display");
-                 $("#entry").html(entries);
-            });
-        };
-    });  
+        if ( event.which == 13 ) {  
+            searchBar();
+        }
+    });
+    
+// searches using "search" button    
+    $('#submit-button').on("click", searchBar);
+    
+// search functionality    
+    function searchBar() {    
+        var inputVal = $('#search-bar').val();
+        var urlSearch = 'https://en.wikipedia.org/w/api.php?action=opensearch&datatype=json&limit=5&search=' + inputVal + '&callback=?';  
+         $.getJSON(urlSearch, function(data) {
+
+            var titleArr = data[1];
+            var descArr = data[2];
+            var linkArr = data[3];
+
+            var entries = [];
+
+            function createEntry(i) {
+                var title = titleArr[i];
+                var description = descArr[i];
+                var link = linkArr[i];
+                var html = "";
+                html += "<div class = 'entry'>";
+                html += "<a href='" + link + "'><h2>" + title + "</h2></a>";
+                html += "<p>" + description + "</p>";
+                html += "</div>";
+                return html;
+            }; 
+
+            for (var i = 0; i < 5; i++) {
+                entries[i] = createEntry(i);
+            };
+
+             $(".entry-display").removeClass("hidden-search-display");
+             $("#entry").html(entries);
+        });
+    };
+    
     
 // add highlight on left side of entry when hover on that entry only
     //currently not working

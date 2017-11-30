@@ -64,6 +64,16 @@ a:hover {
     border-color: #5B2EA0;
 }
 
+.entry {
+    background-color: #C82B6D;
+    border: 2px solid #5B2EA0;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 0 10px 8px;
+    height: auto;
+    
+}
+
 /* Color pallette: 
 http://paletton.com/#uid=55i0T0kkRmibe6jfRe6p9twtxJZ
 background: #97355E; raspberry

@@ -4,6 +4,7 @@ $(document).ready(function() {
     
     $("#search").on("click", function() {
         $(".hidden").slideToggle();
+        $(".entry-display").addClass("hidden-search-display");
     });
     
 // To invoke search     

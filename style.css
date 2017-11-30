@@ -71,7 +71,22 @@ a:hover {
     border: 2px solid #5B2EA0;
     border-radius: 5px;
     margin: 10px 0;
-    height: auto; 
+}
+
+.error {
+    background-color: #5B2EA0;
+    padding: 5px;
+    border: 2px solid #5B2EA0;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.error p {
+    font-size: 115%;
+    color: #EB126D;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10px;
 }
 
 //.border {

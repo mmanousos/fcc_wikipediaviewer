@@ -34,7 +34,7 @@ $(document).ready(function() {
              
             var titleCheck = titleArr[0]; 
             if (titleCheck === undefined) {
-                var html = "<div class= 'entry'><p>Your search term was unrecognized. Please check your spelling and try again.</p></div>";
+                var html = "<div class= 'error'><p>Your search term was unrecognized. Please check your spelling and try again.</p></div>";
                 $(".entry-display").removeClass("hidden-search-display");
                 $("#entry").html(html);
             } else {

@@ -25,3 +25,10 @@ Create button for random article
 Create search bar (on click of search icon, bar slides down into view with way to return it to previous hidden state)
 Create space for random article to show up on page - need way to close it again. / search results
     When searching, pull all articles that are similar to search term. 
+    
+Search bar: 
+    user types in search term
+    user pushes "enter" or "return" (what about for mobile users?)
+        triggers search function & display of results
+            converts info in search box to string & passes string into search url
+        need a way to close search results (and/or clear search box?)

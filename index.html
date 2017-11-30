@@ -16,14 +16,14 @@
     <body id="body" class="body-style">
         <section>
             <div class="jumbo container-fluid img-responsive center-block">
-                <h3 class="title">Search Wikipedia</h3>
+                <h1 class="title">Search Wikipedia</h1>
                 
                 <div class="row">
                     <div class="offset-sm-3 col-sm-6 main">
                         <div><h3>Click Icon to Search <img class='search' id='search' src='search-12-64.png' alt='search icon'></h3></div>
                     <div class="offset-sm-2 col-sm-8 hidden">
                         <!-- search bar-->
-                        <input id="search-bar" type="text" name="search-term" placeholder=" type here...">
+                        <input id="search-bar" type="text" name="search-term" placeholder=" type here..." required>
                         <input id="submit-button" type="submit" name="submit" value="search">
 
                     </div>    
@@ -43,6 +43,14 @@
                         </iframe>
                     </div> 
                 </div>
+                
+                <div class="row entry-display hidden-search-display">
+                    <div class="col-sm-12">
+                        <div id="entry"><p>placeholder</p></div>
+                    </div> 
+                </div>
+                
+                
                 
                 <div class="row">
                     <div class="col-md-6 offset-md-3 credit">

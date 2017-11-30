@@ -31,27 +31,34 @@ $(document).ready(function() {
             var titleArr = data[1];
             var descArr = data[2];
             var linkArr = data[3];
+             
+            var titleCheck = titleArr[0]; 
+            if (titleCheck === undefined) {
+                var html = "<div class= 'entry'><p>Your search term was unrecognized. Please check your spelling and try again.</p></div>";
+                $(".entry-display").removeClass("hidden-search-display");
+                $("#entry").html(html);
+            } else {
+                var entries = [];
 
-            var entries = [];
+                function createEntry(i) {
+                    var title = titleArr[i];
+                    var description = descArr[i];
+                    var link = linkArr[i];
+                    var html = "";
+                    html += "<div class = 'entry'>";
+                    html += "<a href='" + link + "'><h2>" + title + "</h2></a>";
+                    html += "<p>" + description + "</p>";
+                    html += "</div>";
+                    return html;
+                }; 
 
-            function createEntry(i) {
-                var title = titleArr[i];
-                var description = descArr[i];
-                var link = linkArr[i];
-                var html = "";
-                html += "<div class = 'entry'>";
-                html += "<a href='" + link + "'><h2>" + title + "</h2></a>";
-                html += "<p>" + description + "</p>";
-                html += "</div>";
-                return html;
-            }; 
+                for (var i = 0; i < 5; i++) {
+                    entries[i] = createEntry(i);
+                };
 
-            for (var i = 0; i < 5; i++) {
-                entries[i] = createEntry(i);
+                $(".entry-display").removeClass("hidden-search-display");
+                $("#entry").html(entries);
             };
-
-             $(".entry-display").removeClass("hidden-search-display");
-             $("#entry").html(entries);
         });
     };
     

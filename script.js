@@ -39,12 +39,22 @@ $(document).ready(function() {
                     entries[i] = createEntry(i);
                 };
                  
+                 $(".entry-display").removeClass("hidden-search-display");
                  $("#entry").html(entries);
-                
             });
         };
     });  
     
+// add highlight on left side of entry when hover on that entry only
+    //currently not working
+/*    function highlightEdge() {
+        $(".entry").toggleClass("border");
+        console.log("highlight edge here");
+    }
+    
+    //$(".entry").on("mouseenter", highlightEdge);
+    $(".entry").on("focusin", highlightEdge);
+  */  
 // To get and display a random Wikipedia entry    
     
     var urlRandom = 'https://en.wikipedia.org/wiki/Special:Random';

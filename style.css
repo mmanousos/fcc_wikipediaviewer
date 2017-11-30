@@ -47,7 +47,8 @@ a:hover {
 
 .hidden, 
 .hidden-random,
-.hidden-button {
+.hidden-button,
+.hidden-search-display {
     display: none;
 }
 
@@ -66,13 +67,16 @@ a:hover {
 
 .entry {
     background-color: #C82B6D;
+    padding: 5px;
     border: 2px solid #5B2EA0;
     border-radius: 5px;
-    padding: 5px;
-    margin: 10px 0 10px 8px;
-    height: auto;
-    
+    margin: 10px 0;
+    height: auto; 
 }
+
+//.border {
+//    border-left: 5px solid #5B2EA0;
+// }
 
 /* Color pallette: 
 http://paletton.com/#uid=55i0T0kkRmibe6jfRe6p9twtxJZ
